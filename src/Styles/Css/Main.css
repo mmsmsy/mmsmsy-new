@@ -1,0 +1,74 @@
+.main {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -moz-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  min-height: 50rem;
+  background: green; }
+
+.main-component {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2.5rem;
+  width: 100%;
+  background: #04aae8;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #04aae8 0%, #ff6763 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #04aae8), color-stop(100%, #ff6763));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #04aae8 0%, #ff6763 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #04aae8 0%, #ff6763 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #04aae8 0%, #ff6763 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #04aae8 0%, #ff6763 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */ }
+
+.button {
+  -moz-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  color: white;
+  font-size: 1em;
+  line-height: 3rem; }
+  .button:hover {
+    color: #015f9f; }
+
+.example-appear {
+  opacity: 0.01; }
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in; }
+
+/*# sourceMappingURL=Main.css.map */

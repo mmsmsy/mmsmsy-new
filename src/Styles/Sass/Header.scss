@@ -1,0 +1,106 @@
+@import 'mixins.scss';
+
+
+.header {
+  @include display-flex();
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include align-items(center);
+
+  background: white;
+  margin: 1rem 2rem;
+  padding: 0 0.5rem;
+
+  * {
+    margin: 0;
+    width: 10rem;
+    min-width: 10rem;
+  }
+}
+.button-header {
+  padding-top: 0.0625rem;
+  border-bottom: 0.0625rem solid black;
+  @include transition(all 0.2s);
+
+  color: black;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &.is-active {
+    border-bottom: 0.0625rem solid darkred;
+
+    color: darkred;
+  }
+  &:hover {
+    border-bottom: 0.0625rem solid transparent;
+    border-radius: 0.5rem;
+
+    color: white;
+    background: #015f9f;
+  }
+}
+.button-header-primary {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+
+  color: white;
+  background: #04aae8;
+  line-height: 3rem;
+
+  &.is-active {
+    border-bottom: 0;
+
+    background: darkred;
+    color: white;
+  }
+  &:hover {
+    border: 0;
+    border-radius: 0;
+
+    background: #015f9f;
+  }
+}
+.header-logo {
+  box-shadow: 0 0.25rem 1rem gray;
+  height: 4rem;
+  margin: 0;
+  margin-bottom: 4rem;
+  padding-bottom: 0.25rem;
+  @include linear-gradient(#04aae8,#015f9f);
+  @include transform(scale(1.5));
+
+  img {
+    margin-top: -2rem;
+    width: 50%;
+    @include transform(scale(0.4));
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .header {
+    @include flex-direction();
+
+    margin-bottom: 40vh;
+  }
+  .button-header:nth-child(2) {
+    @include order(1);
+  }
+  .button-header:nth-child(3) {
+    @include order(2);
+  }
+  .button-header:nth-child(4) {
+    @include order(4);
+  }
+  .button-header:nth-child(5) {
+    @include order(5);
+  }
+  .header-logo {
+    @include order(3);
+
+    margin: 0;
+  }
+}

@@ -1,0 +1,39 @@
+@import 'mixins.scss';
+
+.main {
+  @include display-flex();
+  @include flex-direction();
+  @include justify-content(center);
+  @include align-content(center);
+
+  min-height: 50rem;
+
+  background: green;
+}
+.main-component {
+  @include display-flex();
+  @include flex-direction(column);
+
+  padding: 2.5rem;
+  width: 100%;
+  @include linear-gradient(#04aae8,#ff6763);
+}
+.button {
+  @include transition(all 0.15s);
+
+  color: white;
+  font-size: 1em;
+  line-height: 3rem;
+
+  &:hover {
+    color: #015f9f;
+  }
+}
+.example-appear {
+  opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
